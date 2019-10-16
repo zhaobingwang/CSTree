@@ -84,8 +84,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSTree.Utilities\CSTree.Utilities\CSTree.Utilities.csproj">
-      <Project>{28a33540-71f5-4e94-b915-b6601c7937ef}</Project>
+    <ProjectReference Include="..\CSTree.Utilities\CSTree.Utilities.csproj">
+      <Project>{ba83663f-878d-4a66-8c1e-a314a3b6f80c}</Project>
       <Name>CSTree.Utilities</Name>
     </ProjectReference>
   </ItemGroup>

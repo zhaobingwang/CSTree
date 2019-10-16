@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "tests\UnitTest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSTree.Utilities.Sample.Winform", "src\CSTree.Utilities.Sample.Winform\CSTree.Utilities.Sample.Winform.csproj", "{8D17DA7E-1E90-4E2C-AD3A-2BF1B0F14DB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSTree.Utilities", "src\CSTree.Utilities\CSTree.Utilities\CSTree.Utilities.csproj", "{28A33540-71F5-4E94-B915-B6601C7937EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSTree.Utilities", "src\CSTree.Utilities\CSTree.Utilities.csproj", "{BA83663F-878D-4A66-8C1E-A314A3B6F80C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{8D17DA7E-1E90-4E2C-AD3A-2BF1B0F14DB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D17DA7E-1E90-4E2C-AD3A-2BF1B0F14DB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D17DA7E-1E90-4E2C-AD3A-2BF1B0F14DB6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{28A33540-71F5-4E94-B915-B6601C7937EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{28A33540-71F5-4E94-B915-B6601C7937EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{28A33540-71F5-4E94-B915-B6601C7937EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{28A33540-71F5-4E94-B915-B6601C7937EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA83663F-878D-4A66-8C1E-A314A3B6F80C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA83663F-878D-4A66-8C1E-A314A3B6F80C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA83663F-878D-4A66-8C1E-A314A3B6F80C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA83663F-878D-4A66-8C1E-A314A3B6F80C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
