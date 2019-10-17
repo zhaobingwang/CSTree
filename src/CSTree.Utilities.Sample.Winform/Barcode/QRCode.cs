@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace CSTree.Utilities.Sample.Winform
 {
-    public partial class Home : Form
+    public partial class QRCode : Form
     {
-        public Home()
+        public QRCode()
         {
             InitializeComponent();
         }
 
-        private void Home_Load(object sender, EventArgs e)
+        private void QRCode_Load(object sender, EventArgs e)
         {
-            
+            pictureBox1.Image = BarCodeHelper.GenerateQRCode("123", 5);
         }
     }
 }

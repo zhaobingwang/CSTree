@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using QRCoder;
+using BarcodeLib;
 
 namespace CSTree.Utilities
 {
@@ -12,6 +13,7 @@ namespace CSTree.Utilities
     /// </summary>
     public class BarCodeHelper
     {
+        #region 二维码生成
         /// <summary>
         /// 创建一个二维码图片
         /// </summary>
@@ -26,5 +28,18 @@ namespace CSTree.Utilities
             Bitmap qrCodeImage = qrCode.GetGraphic(pixelsPerModule);
             return qrCodeImage;
         }
+
+        // TODO:添加一些生成二维码的重载 
+        #endregion
+
+        #region 条形码生成
+        // TODO:添加一些生成二维码的重载 
+        public static Image Generate1DBarcode(string contents, int width, int height)
+        {
+            Barcode barcode = new Barcode();
+            var img = barcode.Encode(BarcodeLib.TYPE.CODE128, contents, width, height);
+            return img;
+        }
+        #endregion
     }
 }
