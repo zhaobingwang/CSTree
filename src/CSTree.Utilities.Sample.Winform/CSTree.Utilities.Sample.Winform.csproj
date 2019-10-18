@@ -12,10 +12,10 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-	<!--.NET Framework引用.NET Standard类库时，依赖项不能从standard流向framework 开始-->
+    <!--.NET Framework引用.NET Standard类库时，依赖项不能从standard流向framework 开始-->
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-	<!--.NET Framework引用.NET Standard类库时，依赖项不能从standard流向framework 结束-->
+    <!--.NET Framework引用.NET Standard类库时，依赖项不能从standard流向framework 结束-->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -107,6 +107,11 @@
       <Project>{ba83663f-878d-4a66-8c1e-a314a3b6f80c}</Project>
       <Name>CSTree.Utilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\avatar.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

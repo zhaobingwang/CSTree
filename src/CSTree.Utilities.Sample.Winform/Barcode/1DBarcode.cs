@@ -20,7 +20,8 @@ namespace CSTree.Utilities.Sample.Winform
 
         private void _1DBarcode_Load(object sender, EventArgs e)
         {
-            var img = BarCodeHelper.Generate1DBarcode("123456", 150, 75);
+            BarCode barCode = new BarCode();
+            var img = barCode.Generate(ZXing.BarcodeFormat.CODE_128, "123456", 150, 75);
             pictureBox1.Image = img;
         }
     }

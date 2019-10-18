@@ -19,7 +19,12 @@ namespace CSTree.Utilities.Sample.Winform
 
         private void QRCode_Load(object sender, EventArgs e)
         {
-            pictureBox1.Image = BarCodeHelper.GenerateQRCode("123", 5);
+            BarCode barCode = new BarCode();
+            //pictureBox1.Image = barCode.Generate(ZXing.BarcodeFormat.QR_CODE, "123456", 100, 100);
+            var avatarPath = AppDomain.CurrentDomain.BaseDirectory + "images/avatar.jpg";
+            Bitmap avatar = new Bitmap(avatarPath);
+            pictureBox1.Image = barCode.GenerateQRCodeWithLogo(avatar, "123456", 100, 100);
+
         }
     }
 }
