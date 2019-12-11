@@ -1,0 +1,49 @@
+name: CSTree Release
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+    name: Build Project CSTree
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.0.100
+    - name: Build with dotnet
+      run: dotnet build src/CSTree --configuration Release
+  
+  test:
+    needs: [build]
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.0.100
+    - name: Test
+      run: dotnet test tests/UnitTests --configuration Release
+  
+  publish:
+    needs: [test]
+    name: Publish CSTree To NuGet
+    runs-on: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.0.100
+    - name: Publish
+      run: |
+        dotnet build src/CSTree --configuration Release
+        dotnet nuget push src/CSTree/bin/Release/CSTree.*.nupkg -k ${APIKEY} -s https://www.nuget.org/api/v2/package
+      env:
+        APIKEY: ${{ secrets.NuGetAPIKey }}
