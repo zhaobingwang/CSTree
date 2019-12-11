@@ -1,4 +1,4 @@
-name: CodeSnippets Release
+name: CSTree.Utilities Release
 
 on:
   push:
