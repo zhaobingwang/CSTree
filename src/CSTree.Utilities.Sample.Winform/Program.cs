@@ -16,7 +16,7 @@ namespace CSTree.Utilities.Sample.Winform
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QRCode());
+            Application.Run(new BarcodeSample());
         }
     }
 }

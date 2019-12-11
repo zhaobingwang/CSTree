@@ -17,59 +17,93 @@ namespace CSTree.Utilities
     /// </summary>
     public class BarCode
     {
+        public BarCodeConfig BarCodeConfig { get; set; }
+
+        #region ctor
         public BarCode()
         {
-
+            BarCodeConfig = new BarCodeConfig();
         }
-        #region 条码生成
 
-        public Bitmap Generate(BarcodeFormat format, string text, int width, int height)
+        public BarCode(int width, int height) : this()
+        {
+            BarCodeConfig.Width = width;
+            BarCodeConfig.Height = height;
+        }
+        #endregion
+
+        #region 条码生成
+        /// <summary>
+        /// 生成条码
+        /// </summary>
+        /// <param name="format">条码码制</param>
+        /// <param name="text">条码信息</param>
+        /// <param name="width">宽度</param>
+        /// <param name="height">高度</param>
+        /// <returns></returns>
+        public Bitmap Generate(BarcodeFormat format, string text)
         {
             BarcodeWriter writer = new BarcodeWriter();
+
             writer.Format = format;
-            if (Is2DBarcode(format))
-            {
-                QrCodeEncodingOptions options = new QrCodeEncodingOptions();
-                options.DisableECI = true;  // 设置内容编码
-                options.CharacterSet = "UTF-8"; // 设置二维码的宽度和高度
-                options.Margin = 1; // 设置二维码的边距,单位不是固定像素
-            }
-            else
-            {
-                EncodingOptions options = new EncodingOptions();
-                options.Width = width;
-                options.Height = height;
-                options.Margin = 1;
-                writer.Options = options;
-            }
+            writer.Options = BarCodeConfig;
 
             Bitmap bitmap = writer.Write(text);
             return bitmap;
         }
 
+
+        //public Bitmap Generate(BarcodeFormat format, string text)
+        //{
+        //    BarcodeWriter writer = new BarcodeWriter();
+        //    writer.Format = format;
+        //    if (Is2DBarcode(format))
+        //    {
+        //        QrCodeEncodingOptions options = new QrCodeEncodingOptions();
+        //        options.DisableECI = true;
+        //        options.CharacterSet = "UTF-8";
+        //        options.Margin = 1;
+        //        options.Width = BarCodeConfig.Width;
+        //        options.Height = BarCodeConfig.Height;
+        //    }
+        //    else
+        //    {
+        //        EncodingOptions options = new EncodingOptions();
+        //        options.Width = BarCodeConfig.Width;
+        //        options.Height = BarCodeConfig.Height;
+        //        options.Margin = 1;
+        //        writer.Options = options;
+        //    }
+
+        //    Bitmap bitmap = writer.Write(text);
+        //    return bitmap;
+        //}
+
         /// <summary>
         /// 生成带Logo的二维码
         /// </summary>
-        /// <param name="text">内容</param>
+        /// <param name="text">二维码信息</param>
         /// <param name="width">宽度</param>
         /// <param name="height">高度</param>
-        public Bitmap GenerateQRCodeWithLogo(Bitmap logo, string text, int width, int height)
+        public Bitmap GenerateQRCodeWithLogo(Bitmap logo, string text)
         {
             // 构造二维码写码器
             MultiFormatWriter writer = new MultiFormatWriter();
             Dictionary<EncodeHintType, object> hint = new Dictionary<EncodeHintType, object>();
             hint.Add(EncodeHintType.CHARACTER_SET, "UTF-8");
             hint.Add(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
-            hint.Add(EncodeHintType.MARGIN, 2); // 旧版本不起作用，需要手动去除白边
+            hint.Add(EncodeHintType.MARGIN, BarCodeConfig.Margin);
 
             // 生成二维码 
-            BitMatrix bm = writer.encode(text, BarcodeFormat.QR_CODE, width + 30, height + 30, hint);
-            bm = DeleteWhite(bm);
+            BitMatrix bm = writer.encode(text, BarcodeFormat.QR_CODE, BarCodeConfig.Width, BarCodeConfig.Height, hint);
+            //bm = DeleteWhite(bm);
             BarcodeWriter barcodeWriter = new BarcodeWriter();
             Bitmap qrCode = barcodeWriter.Write(bm);
 
             // 获取二维码实际尺寸（去掉二维码两边空白后的实际尺寸）
             int[] rectangle = bm.getEnclosingRectangle();
+            int[] tl = bm.getTopLeftOnBit();
+            int[] br = bm.getBottomRightOnBit();
 
             // 计算插入图片的大小和位置
             int middleW = Math.Min((int)(rectangle[2] / 3), logo.Width);
@@ -83,7 +117,7 @@ namespace CSTree.Utilities
                 g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
                 g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
                 g.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-                g.DrawImage(qrCode, 0, 0, width, height);
+                g.DrawImage(qrCode, 0, 0, BarCodeConfig.Width, BarCodeConfig.Height);
                 // 白底将二维码插入图片
                 g.FillRectangle(Brushes.White, middleL, middleT, middleW, middleH);
                 g.DrawImage(logo, middleL, middleT, middleW, middleH);
@@ -92,6 +126,7 @@ namespace CSTree.Utilities
         }
         #endregion
 
+        #region private function
         /// <summary>
         /// 是否是二维码
         /// </summary>
@@ -129,6 +164,7 @@ namespace CSTree.Utilities
             }
             return resMatrix;
         }
+        #endregion
 
         #region Obsolete
         //#region 二维码生成
