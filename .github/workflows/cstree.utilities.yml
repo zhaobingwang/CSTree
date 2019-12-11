@@ -1,0 +1,37 @@
+name: CodeSnippets Release
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build:
+    name: Build Project CSTree.Utilities
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.0.100
+    - name: Build with dotnet
+      run: dotnet build src/CSTree.Utilities --configuration Release
+  
+  
+  publish:
+    needs: [build]
+    name: Publish CSTree.Utilities To NuGet
+    runs-on: [ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.0.100
+    - name: Publish
+      run: |
+        dotnet build src/CSTree.Utilities --configuration Release
+        dotnet nuget push src/CSTree.Utilities/bin/Release/CSTree.Utilities.*.nupkg -k ${APIKEY} -s https://www.nuget.org/api/v2/package
+      env:
+        APIKEY: ${{ secrets.NuGetAPIKey }}
