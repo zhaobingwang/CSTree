@@ -1,4 +1,4 @@
-name: CSTree.Utilities Release
+name: CSTree Release
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build Project CSTree.Utilities
+    name: Build Project CSTree
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,7 @@ jobs:
       with:
         dotnet-version: 3.0.100
     - name: Build with dotnet
-      run: dotnet build src/CSTree.Utilities --configuration Release
+      run: dotnet build src/CSTree --configuration Release
   
   test:
     needs: [build]
@@ -33,7 +33,7 @@ jobs:
   
   publish:
     needs: [test]
-    name: Publish CSTree.Utilities To NuGet
+    name: Publish CSTree To NuGet
     runs-on: [ubuntu-latest]
     steps:
     - uses: actions/checkout@v1
@@ -43,7 +43,7 @@ jobs:
         dotnet-version: 3.0.100
     - name: Publish
       run: |
-        dotnet build src/CSTree.Utilities --configuration Release
-        dotnet nuget push src/CSTree.Utilities/bin/Release/CSTree.Utilities.*.nupkg -k ${APIKEY} -s https://www.nuget.org/api/v2/package
+        dotnet build src/CSTree --configuration Release
+        dotnet nuget push src/CSTree/bin/Release/CSTree.*.nupkg -k ${APIKEY} -s https://www.nuget.org/api/v2/package
       env:
         APIKEY: ${{ secrets.NuGetAPIKey }}
