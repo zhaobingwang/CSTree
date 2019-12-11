@@ -53,12 +53,12 @@ namespace CSTree.Utilities.Sample.Winform
         {
             InitConfig();
 
-            barCodeContents = rtxBarcode.Text;
+            //barCodeContents = rtxBarcode.Text;
 
-            var logo = new Bitmap($"{AppDomain.CurrentDomain.BaseDirectory}images/avatar.jpg");
-            barCode2D.BarCodeConfig = qrCodeEncodingConfig;
-            var bitmap2DBarcode = barCode2D.GenerateQRCodeWithLogo(logo, barCodeContents);
-            pic2D.Image = bitmap2DBarcode;
+            //var logo = new Bitmap($"{AppDomain.CurrentDomain.BaseDirectory}images/avatar.jpg");
+            //barCode2D.BarCodeConfig = qrCodeEncodingConfig;
+            //var bitmap2DBarcode = barCode2D.GenerateQRCodeWithLogo(logo, barCodeContents);
+            //pic2D.Image = bitmap2DBarcode;
         }
 
         private void InitConfig()
