@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\CSTree\CSTree.csproj" />
+    <ProjectReference Include="..\..\src\CSTree\CSTree.csproj" />
   </ItemGroup>
 
 </Project>
