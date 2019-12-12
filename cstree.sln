@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSTree.Utilities", "src\CST
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{92084DF9-E77C-4EBA-8BC7-4C21B5D89890}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\cstree.utilities.yml = .github\workflows\cstree.utilities.yml
+		.github\workflows\cstree.yml = .github\workflows\cstree.yml
 		README.md = README.md
 	EndProjectSection
 EndProject

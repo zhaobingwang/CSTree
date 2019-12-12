@@ -7,6 +7,9 @@
     <RepositoryUrl>https://github.com/zhaobingwang/CSTree.git</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>ZhaoBingwang</Authors>
+    <Company />
+    <Description>.NET/C# 通用代码库</Description>
   </PropertyGroup>
 
 </Project>
