@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: CSTree
+  commentId: N:CSTree
+  id: CSTree
+  children:
+  - CSTree.BCLExtensions
+  langs:
+  - csharp
+  - vb
+  name: CSTree
+  nameWithType: CSTree
+  fullName: CSTree
+  type: Namespace
+  assemblies:
+  - CSTree
+references:
+- uid: CSTree.BCLExtensions
+  commentId: T:CSTree.BCLExtensions
+  name: BCLExtensions
+  nameWithType: BCLExtensions
+  fullName: CSTree.BCLExtensions

@@ -1,0 +1,11 @@
+{
+  "CSTree": "CSTree.yml",
+  "CSTree.BCLExtensions": "CSTree.BCLExtensions.yml",
+  "CSTree.BCLExtensions.ToChineseDateString(System.DateTime)": "CSTree.BCLExtensions.yml",
+  "CSTree.BCLExtensions.ToChineseDateString(System.Nullable{System.DateTime})": "CSTree.BCLExtensions.yml",
+  "CSTree.BCLExtensions.ToChineseDateTimeString(System.DateTime)": "CSTree.BCLExtensions.yml",
+  "CSTree.BCLExtensions.ToChineseDateTimeString(System.Nullable{System.DateTime})": "CSTree.BCLExtensions.yml",
+  "CSTree.BCLExtensions.ToDateString(System.DateTime)": "CSTree.BCLExtensions.yml",
+  "CSTree.BCLExtensions.ToDateString(System.Nullable{System.DateTime})": "CSTree.BCLExtensions.yml",
+  "CSTree.BCLExtensions.ToFriendlyDateString(System.DateTime,System.Nullable{System.DateTime})": "CSTree.BCLExtensions.yml"
+}
