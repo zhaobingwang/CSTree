@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSTree.Utilities.Sample.Win
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSTree.Utilities", "src\CSTree.Utilities\CSTree.Utilities.csproj", "{BA83663F-878D-4A66-8C1E-A314A3B6F80C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{92084DF9-E77C-4EBA-8BC7-4C21B5D89890}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00 Solution Items", "00 Solution Items", "{92084DF9-E77C-4EBA-8BC7-4C21B5D89890}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\cstree.yml = .github\workflows\cstree.yml
 		README.md = README.md
@@ -16,6 +16,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSTree", "src\CSTree\CSTree.csproj", "{B63DDFBA-47B9-47FC-80F4-B81A67658B08}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSTree.UnitTests", "tests\CSTree.UnitTests\CSTree.UnitTests.csproj", "{93E4BFCE-2711-47A6-941C-F86233FFAEA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99 be removed", "99 be removed", "{D74374C3-1C06-4E2A-9A1F-BB72EE381A28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 src", "01 src", "{34BF1695-065E-417B-8EA0-84FE3059EE0D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Tests", "02 Tests", "{2B924930-F5E5-434B-A629-4D0EBDF1D5B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +48,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D17DA7E-1E90-4E2C-AD3A-2BF1B0F14DB6} = {D74374C3-1C06-4E2A-9A1F-BB72EE381A28}
+		{BA83663F-878D-4A66-8C1E-A314A3B6F80C} = {D74374C3-1C06-4E2A-9A1F-BB72EE381A28}
+		{B63DDFBA-47B9-47FC-80F4-B81A67658B08} = {34BF1695-065E-417B-8EA0-84FE3059EE0D}
+		{93E4BFCE-2711-47A6-941C-F86233FFAEA1} = {2B924930-F5E5-434B-A629-4D0EBDF1D5B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13BEEDBF-637D-49D3-BC53-56395CE93FDA}
