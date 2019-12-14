@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace CSTree
@@ -9,6 +10,14 @@ namespace CSTree
     /// </summary>
     public static partial class BCLExtensions
     {
+        #region variables && constants
+        /// <summary>
+        /// 周未
+        /// </summary>
+        public static readonly DayOfWeek[] Weekend = { DayOfWeek.Saturday, DayOfWeek.Sunday }; 
+        #endregion
+
+        #region 特定时间格式
         /// <summary>
         /// 转为中文日期
         /// </summary>
@@ -77,7 +86,78 @@ namespace CSTree
             return dateTime.Value.ToString("yyyy-MM-dd");
             //return ToDateString(dateTime.Value);    // 很容易忘记写.velue,造成死循环
         }
+        #endregion
 
+        #region 时间比较和判断
+        /// <summary>
+        /// 是否早于指定时间
+        /// </summary>
+        /// <param name="dateTime"></param>
+        /// <param name="targetDateTime">目标时间</param>
+        /// <returns></returns>
+        public static bool IsBefore(this DateTime dateTime, DateTime targetDateTime)
+        {
+            return dateTime.CompareTo(targetDateTime) < 0;
+        }
+
+        /// <summary>
+        /// 是否晚于指定时间
+        /// </summary>
+        /// <param name="dateTime"></param>
+        /// <param name="targetDateTime"></param>
+        /// <returns></returns>
+        public static bool IsAfter(this DateTime dateTime, DateTime targetDateTime)
+        {
+            return dateTime.CompareTo(targetDateTime) > 0;
+        }
+
+        /// <summary>
+        /// 是否是周末
+        /// </summary>
+        /// <param name="dateTime"></param>
+        /// <returns></returns>
+        public static bool IsWeekend(this DateTime dateTime)
+        {
+            return Weekend.Any(d => d == dateTime.DayOfWeek);
+        }
+
+        /// <summary>
+        /// 是否是今天
+        /// </summary>
+        /// <param name="dateTime"></param>
+        public static bool IsToday(this DateTime dateTime, DateTime? today = null)
+        {
+            if (today == null)
+                today = DateTime.Now;
+            return dateTime.Date == today.Value.Date;
+        }
+
+        #endregion
+
+        #region 特殊时间
+        /// <summary>
+        /// 转为给定时间的开始时刻
+        /// 精确到秒
+        /// </summary>
+        /// <param name="dateTime"></param>
+        /// <returns></returns>
+        public static DateTime ToStartOfDay(this DateTime dateTime)
+        {
+            return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 0, 0, 0);
+        }
+        /// <summary>
+        /// 转为给定时间的最后一刻
+        /// 精确到秒
+        /// </summary>
+        /// <param name="dateTime"></param>
+        /// <returns></returns>
+        public static DateTime ToEndOfDay(this DateTime dateTime)
+        {
+            return new DateTime(dateTime.Year, dateTime.Month, dateTime.Day, 23, 59, 59);
+        }
+        #endregion
+
+        #region 其他
         /// <summary>
         /// 转为友好的时间信息
         /// 比如：1分钟前，3天前等
@@ -119,5 +199,7 @@ namespace CSTree
                 return "去年";
             return $"{Math.Floor(timeSince.TotalDays / 365)}年前";
         }
+        #endregion
+
     }
 }

@@ -48,6 +48,7 @@ namespace CSTree.UnitTests
             Assert.True(nullDateTime2.ToDateString() == expected);
         }
 
+        #region 友好时间提示 测试
         [Theory(DisplayName = "转为友好的时间信息-成功测试")]
         [InlineData("刚刚", 0)]
         [InlineData("刚刚", 59)]
@@ -92,5 +93,74 @@ namespace CSTree.UnitTests
 
             Assert.True(publishTime.AddSeconds(-1 * beSubtractSeconds).ToFriendlyDateString(now) == friendlyInfo);
         }
+        #endregion
+
+        #region 时间比较和判断 测试
+        [Theory(DisplayName = "是否早于指定时间")]
+        [InlineData(true, 1)]
+        [InlineData(false, 0)]
+        [InlineData(false, -1)]
+        public void IsBefore(bool isBefore, int beAddSeconds)
+        {
+            var now = DateTime.Now;
+            var target = now.AddSeconds(beAddSeconds);
+            Assert.True(now.IsBefore(target) == isBefore);
+        }
+
+        [Theory(DisplayName = "是否晚于指定时间")]
+        [InlineData(false, 1)]
+        [InlineData(false, 0)]
+        [InlineData(true, -1)]
+        public void IsAfter(bool isBefore, int beAddSeconds)
+        {
+            var now = DateTime.Now;
+            var target = now.AddSeconds(beAddSeconds);
+            Assert.True(now.IsAfter(target) == isBefore);
+        }
+
+        [Theory(DisplayName = "是否是周末")]
+        [InlineData(false, 0)]
+        [InlineData(false, 1)]
+        [InlineData(false, 2)]
+        [InlineData(false, 3)]
+        [InlineData(false, 4)]
+        [InlineData(true, 5)]
+        [InlineData(true, 6)]
+        public void IsWeekDay(bool isWeekend, int beAddDays)
+        {
+            DateTime monday = new DateTime(2019, 12, 16);
+            Assert.True(monday.AddDays(beAddDays).IsWeekend() == isWeekend);
+        }
+
+        [Theory(DisplayName = "是否是今天")]
+        [InlineData(true, 0)]
+        [InlineData(false, 1)]
+        [InlineData(false, -1)]
+        public void IsToday(bool isToday, int beAddDays)
+        {
+            DateTime today = new DateTime(2019, 12, 16, 23, 18, 12);
+            var source = today.AddDays(beAddDays);
+
+            Assert.True(source.AddDays(beAddDays).IsToday(today) == isToday);
+        }
+        #endregion
+
+        #region 特殊时间
+        [Fact(DisplayName = "转为当天开始时间-成功测试")]
+        public void ToStartOfDayShouldSuccess()
+        {
+            var dateTime = new DateTime(2019, 12, 12, 16, 24, 12);
+            var expected = new DateTime(2019, 12, 12, 0, 0, 0);
+            Assert.True(dateTime.ToStartOfDay() == expected);
+        }
+
+        [Fact(DisplayName = "转为当天结束时间-成功测试")]
+        public void ToEndOfDayShouldSuccess()
+        {
+            var dateTime = new DateTime(2019, 12, 12, 16, 24, 12);
+            var expected = new DateTime(2019, 12, 12, 23, 59, 59);
+            Assert.True(dateTime.ToEndOfDay() == expected);
+        }
+        #endregion
     }
 }
