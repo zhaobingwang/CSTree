@@ -1,10 +1,11 @@
 ﻿using System;
 using Xunit;
+using CSTree.BCLExtensions;
 
 namespace CSTree.UnitTests
 {
     [Trait("BCL扩展方法", "System.DateTime")]
-    public class BCLExtensions
+    public class DateTimeExtensionsTests
     {
         [Fact(DisplayName = "转中文日期格式-成功测试")]
         public void ToChineseDateStringShouldSuccess()

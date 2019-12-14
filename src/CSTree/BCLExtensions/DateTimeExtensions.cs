@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CSTree
+namespace CSTree.BCLExtensions
 {
     /// <summary>
     /// BCL扩展 - 日期时间
     /// </summary>
-    public static partial class BCLExtensions
+    public static partial class DateTimeExtensions
     {
         #region variables && constants
         /// <summary>
