@@ -1,11 +1,19 @@
 {
-  "CSTree": "CSTree.yml",
   "CSTree.BCLExtensions": "CSTree.BCLExtensions.yml",
-  "CSTree.BCLExtensions.ToChineseDateString(System.DateTime)": "CSTree.BCLExtensions.yml",
-  "CSTree.BCLExtensions.ToChineseDateString(System.Nullable{System.DateTime})": "CSTree.BCLExtensions.yml",
-  "CSTree.BCLExtensions.ToChineseDateTimeString(System.DateTime)": "CSTree.BCLExtensions.yml",
-  "CSTree.BCLExtensions.ToChineseDateTimeString(System.Nullable{System.DateTime})": "CSTree.BCLExtensions.yml",
-  "CSTree.BCLExtensions.ToDateString(System.DateTime)": "CSTree.BCLExtensions.yml",
-  "CSTree.BCLExtensions.ToDateString(System.Nullable{System.DateTime})": "CSTree.BCLExtensions.yml",
-  "CSTree.BCLExtensions.ToFriendlyDateString(System.DateTime,System.Nullable{System.DateTime})": "CSTree.BCLExtensions.yml"
+  "CSTree.BCLExtensions.DateTimeExtensions": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.IsAfter(System.DateTime,System.DateTime)": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.IsBefore(System.DateTime,System.DateTime)": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.IsToday(System.DateTime,System.Nullable{System.DateTime})": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.IsWeekend(System.DateTime)": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.DateTime)": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.Nullable{System.DateTime})": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.DateTime)": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.Nullable{System.DateTime})": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.DateTime)": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.Nullable{System.DateTime})": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.ToEndOfDay(System.DateTime)": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.ToFriendlyDateString(System.DateTime,System.Nullable{System.DateTime})": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.ToStartOfDay(System.DateTime)": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.DateTimeExtensions.Weekend": "CSTree.BCLExtensions.DateTimeExtensions.yml",
+  "CSTree.BCLExtensions.StringExtensions": "CSTree.BCLExtensions.StringExtensions.yml"
 }

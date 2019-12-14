@@ -1,6 +1,8 @@
 ### YamlMime:TableOfContent
-- uid: CSTree
-  name: CSTree
+- uid: CSTree.BCLExtensions
+  name: CSTree.BCLExtensions
   items:
-  - uid: CSTree.BCLExtensions
-    name: BCLExtensions
+  - uid: CSTree.BCLExtensions.DateTimeExtensions
+    name: DateTimeExtensions
+  - uid: CSTree.BCLExtensions.StringExtensions
+    name: StringExtensions

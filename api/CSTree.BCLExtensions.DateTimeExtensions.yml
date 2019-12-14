@@ -1,0 +1,1186 @@
+### YamlMime:ManagedReference
+items:
+- uid: CSTree.BCLExtensions.DateTimeExtensions
+  commentId: T:CSTree.BCLExtensions.DateTimeExtensions
+  id: DateTimeExtensions
+  parent: CSTree.BCLExtensions
+  children:
+  - CSTree.BCLExtensions.DateTimeExtensions.IsAfter(System.DateTime,System.DateTime)
+  - CSTree.BCLExtensions.DateTimeExtensions.IsBefore(System.DateTime,System.DateTime)
+  - CSTree.BCLExtensions.DateTimeExtensions.IsToday(System.DateTime,System.Nullable{System.DateTime})
+  - CSTree.BCLExtensions.DateTimeExtensions.IsWeekend(System.DateTime)
+  - CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.DateTime)
+  - CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.Nullable{System.DateTime})
+  - CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.DateTime)
+  - CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.Nullable{System.DateTime})
+  - CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.DateTime)
+  - CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.Nullable{System.DateTime})
+  - CSTree.BCLExtensions.DateTimeExtensions.ToEndOfDay(System.DateTime)
+  - CSTree.BCLExtensions.DateTimeExtensions.ToFriendlyDateString(System.DateTime,System.Nullable{System.DateTime})
+  - CSTree.BCLExtensions.DateTimeExtensions.ToStartOfDay(System.DateTime)
+  - CSTree.BCLExtensions.DateTimeExtensions.Weekend
+  langs:
+  - csharp
+  - vb
+  name: DateTimeExtensions
+  nameWithType: DateTimeExtensions
+  fullName: CSTree.BCLExtensions.DateTimeExtensions
+  type: Class
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: DateTimeExtensions
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 10
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\nBCL扩展 - 日期时间\n"
+  example: []
+  syntax:
+    content: public static class DateTimeExtensions
+    content.vb: Public Module DateTimeExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: CSTree.BCLExtensions.DateTimeExtensions.Weekend
+  commentId: F:CSTree.BCLExtensions.DateTimeExtensions.Weekend
+  id: Weekend
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: Weekend
+  nameWithType: DateTimeExtensions.Weekend
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.Weekend
+  type: Field
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: Weekend
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 16
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n周未\n"
+  example: []
+  syntax:
+    content: public static readonly DayOfWeek[] Weekend
+    return:
+      type: System.DayOfWeek[]
+    content.vb: Public Shared ReadOnly Weekend As DayOfWeek()
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.DateTime)
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.DateTime)
+  id: ToChineseDateString(System.DateTime)
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToChineseDateString(DateTime)
+  nameWithType: DateTimeExtensions.ToChineseDateString(DateTime)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: ToChineseDateString
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 25
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n转为中文日期\n"
+  example: []
+  syntax:
+    content: public static string ToChineseDateString(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: 日期时间
+    return:
+      type: System.String
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToChineseDateString(dateTime As Date) As String
+  overload: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.Nullable{System.DateTime})
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.Nullable{System.DateTime})
+  id: ToChineseDateString(System.Nullable{System.DateTime})
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToChineseDateString(Nullable<DateTime>)
+  nameWithType: DateTimeExtensions.ToChineseDateString(Nullable<DateTime>)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.Nullable<System.DateTime>)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: ToChineseDateString
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 35
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n转为中文日期\n"
+  example: []
+  syntax:
+    content: public static string ToChineseDateString(this DateTime? dateTime)
+    parameters:
+    - id: dateTime
+      type: System.Nullable{System.DateTime}
+      description: 日期时间
+    return:
+      type: System.String
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToChineseDateString(dateTime As Date?) As String
+  overload: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString*
+  nameWithType.vb: DateTimeExtensions.ToChineseDateString(Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString(System.Nullable(Of System.DateTime))
+  name.vb: ToChineseDateString(Nullable(Of DateTime))
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.DateTime)
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.DateTime)
+  id: ToChineseDateTimeString(System.DateTime)
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToChineseDateTimeString(DateTime)
+  nameWithType: DateTimeExtensions.ToChineseDateTimeString(DateTime)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: ToChineseDateTimeString
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 48
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n转为中文日期时间\n"
+  example: []
+  syntax:
+    content: public static string ToChineseDateTimeString(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: 日期时间
+    return:
+      type: System.String
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToChineseDateTimeString(dateTime As Date) As String
+  overload: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.Nullable{System.DateTime})
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.Nullable{System.DateTime})
+  id: ToChineseDateTimeString(System.Nullable{System.DateTime})
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToChineseDateTimeString(Nullable<DateTime>)
+  nameWithType: DateTimeExtensions.ToChineseDateTimeString(Nullable<DateTime>)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.Nullable<System.DateTime>)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: ToChineseDateTimeString
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 58
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n转为中文日期时间\n"
+  example: []
+  syntax:
+    content: public static string ToChineseDateTimeString(this DateTime? dateTime)
+    parameters:
+    - id: dateTime
+      type: System.Nullable{System.DateTime}
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToChineseDateTimeString(dateTime As Date?) As String
+  overload: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString*
+  nameWithType.vb: DateTimeExtensions.ToChineseDateTimeString(Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString(System.Nullable(Of System.DateTime))
+  name.vb: ToChineseDateTimeString(Nullable(Of DateTime))
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.DateTime)
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.DateTime)
+  id: ToDateString(System.DateTime)
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToDateString(DateTime)
+  nameWithType: DateTimeExtensions.ToDateString(DateTime)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: ToDateString
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 71
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n转为yyyy-MM-dd格式字符串\n"
+  example: []
+  syntax:
+    content: public static string ToDateString(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: 时间日期
+    return:
+      type: System.String
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDateString(dateTime As Date) As String
+  overload: CSTree.BCLExtensions.DateTimeExtensions.ToDateString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.Nullable{System.DateTime})
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.Nullable{System.DateTime})
+  id: ToDateString(System.Nullable{System.DateTime})
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToDateString(Nullable<DateTime>)
+  nameWithType: DateTimeExtensions.ToDateString(Nullable<DateTime>)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.Nullable<System.DateTime>)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: ToDateString
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 81
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n转为yyyy-MM-dd格式字符串\n"
+  example: []
+  syntax:
+    content: public static string ToDateString(this DateTime? dateTime)
+    parameters:
+    - id: dateTime
+      type: System.Nullable{System.DateTime}
+      description: 时间日期
+    return:
+      type: System.String
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDateString(dateTime As Date?) As String
+  overload: CSTree.BCLExtensions.DateTimeExtensions.ToDateString*
+  nameWithType.vb: DateTimeExtensions.ToDateString(Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: CSTree.BCLExtensions.DateTimeExtensions.ToDateString(System.Nullable(Of System.DateTime))
+  name.vb: ToDateString(Nullable(Of DateTime))
+- uid: CSTree.BCLExtensions.DateTimeExtensions.IsBefore(System.DateTime,System.DateTime)
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.IsBefore(System.DateTime,System.DateTime)
+  id: IsBefore(System.DateTime,System.DateTime)
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsBefore(DateTime, DateTime)
+  nameWithType: DateTimeExtensions.IsBefore(DateTime, DateTime)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.IsBefore(System.DateTime, System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: IsBefore
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 97
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n是否早于指定时间\n"
+  example: []
+  syntax:
+    content: public static bool IsBefore(this DateTime dateTime, DateTime targetDateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: ''
+    - id: targetDateTime
+      type: System.DateTime
+      description: 目标时间
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsBefore(dateTime As Date, targetDateTime As Date) As Boolean
+  overload: CSTree.BCLExtensions.DateTimeExtensions.IsBefore*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: CSTree.BCLExtensions.DateTimeExtensions.IsAfter(System.DateTime,System.DateTime)
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.IsAfter(System.DateTime,System.DateTime)
+  id: IsAfter(System.DateTime,System.DateTime)
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsAfter(DateTime, DateTime)
+  nameWithType: DateTimeExtensions.IsAfter(DateTime, DateTime)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.IsAfter(System.DateTime, System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: IsAfter
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 108
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n是否晚于指定时间\n"
+  example: []
+  syntax:
+    content: public static bool IsAfter(this DateTime dateTime, DateTime targetDateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: ''
+    - id: targetDateTime
+      type: System.DateTime
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsAfter(dateTime As Date, targetDateTime As Date) As Boolean
+  overload: CSTree.BCLExtensions.DateTimeExtensions.IsAfter*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: CSTree.BCLExtensions.DateTimeExtensions.IsWeekend(System.DateTime)
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.IsWeekend(System.DateTime)
+  id: IsWeekend(System.DateTime)
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsWeekend(DateTime)
+  nameWithType: DateTimeExtensions.IsWeekend(DateTime)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.IsWeekend(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: IsWeekend
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 118
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n是否是周末\n"
+  example: []
+  syntax:
+    content: public static bool IsWeekend(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsWeekend(dateTime As Date) As Boolean
+  overload: CSTree.BCLExtensions.DateTimeExtensions.IsWeekend*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: CSTree.BCLExtensions.DateTimeExtensions.IsToday(System.DateTime,System.Nullable{System.DateTime})
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.IsToday(System.DateTime,System.Nullable{System.DateTime})
+  id: IsToday(System.DateTime,System.Nullable{System.DateTime})
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsToday(DateTime, Nullable<DateTime>)
+  nameWithType: DateTimeExtensions.IsToday(DateTime, Nullable<DateTime>)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.IsToday(System.DateTime, System.Nullable<System.DateTime>)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: IsToday
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 127
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n是否是今天\n"
+  example: []
+  syntax:
+    content: public static bool IsToday(this DateTime dateTime, DateTime? today = default(DateTime? ))
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: ''
+    - id: today
+      type: System.Nullable{System.DateTime}
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function IsToday(dateTime As Date, today As Date? = Nothing) As Boolean
+  overload: CSTree.BCLExtensions.DateTimeExtensions.IsToday*
+  nameWithType.vb: DateTimeExtensions.IsToday(DateTime, Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: CSTree.BCLExtensions.DateTimeExtensions.IsToday(System.DateTime, System.Nullable(Of System.DateTime))
+  name.vb: IsToday(DateTime, Nullable(Of DateTime))
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToStartOfDay(System.DateTime)
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.ToStartOfDay(System.DateTime)
+  id: ToStartOfDay(System.DateTime)
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToStartOfDay(DateTime)
+  nameWithType: DateTimeExtensions.ToStartOfDay(DateTime)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToStartOfDay(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: ToStartOfDay
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 143
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n转为给定时间的开始时刻\n精确到秒\n"
+  example: []
+  syntax:
+    content: public static DateTime ToStartOfDay(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: ''
+    return:
+      type: System.DateTime
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToStartOfDay(dateTime As Date) As Date
+  overload: CSTree.BCLExtensions.DateTimeExtensions.ToStartOfDay*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToEndOfDay(System.DateTime)
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.ToEndOfDay(System.DateTime)
+  id: ToEndOfDay(System.DateTime)
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToEndOfDay(DateTime)
+  nameWithType: DateTimeExtensions.ToEndOfDay(DateTime)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToEndOfDay(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: ToEndOfDay
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 153
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n转为给定时间的最后一刻\n精确到秒\n"
+  example: []
+  syntax:
+    content: public static DateTime ToEndOfDay(this DateTime dateTime)
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: ''
+    return:
+      type: System.DateTime
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToEndOfDay(dateTime As Date) As Date
+  overload: CSTree.BCLExtensions.DateTimeExtensions.ToEndOfDay*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToFriendlyDateString(System.DateTime,System.Nullable{System.DateTime})
+  commentId: M:CSTree.BCLExtensions.DateTimeExtensions.ToFriendlyDateString(System.DateTime,System.Nullable{System.DateTime})
+  id: ToFriendlyDateString(System.DateTime,System.Nullable{System.DateTime})
+  isExtensionMethod: true
+  parent: CSTree.BCLExtensions.DateTimeExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToFriendlyDateString(DateTime, Nullable<DateTime>)
+  nameWithType: DateTimeExtensions.ToFriendlyDateString(DateTime, Nullable<DateTime>)
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToFriendlyDateString(System.DateTime, System.Nullable<System.DateTime>)
+  type: Method
+  source:
+    remote:
+      path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+      branch: dev
+      repo: https://github.com/zhaobingwang/CSTree.git
+    id: ToFriendlyDateString
+    path: src/CSTree/BCLExtensions/DateTimeExtensions.cs
+    startLine: 168
+  assemblies:
+  - CSTree
+  namespace: CSTree.BCLExtensions
+  summary: "\n转为友好的时间信息\n比如：1分钟前，3天前等\nXXX:一些较复杂判断先简单处理实现，比如昨天，上周，上个月等\n"
+  example: []
+  syntax:
+    content: public static string ToFriendlyDateString(this DateTime dateTime, DateTime? now = default(DateTime? ))
+    parameters:
+    - id: dateTime
+      type: System.DateTime
+      description: ''
+    - id: now
+      type: System.Nullable{System.DateTime}
+      description: 如果为null,则取DateTime.Now
+    return:
+      type: System.String
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToFriendlyDateString(dateTime As Date, now As Date? = Nothing) As String
+  overload: CSTree.BCLExtensions.DateTimeExtensions.ToFriendlyDateString*
+  nameWithType.vb: DateTimeExtensions.ToFriendlyDateString(DateTime, Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: CSTree.BCLExtensions.DateTimeExtensions.ToFriendlyDateString(System.DateTime, System.Nullable(Of System.DateTime))
+  name.vb: ToFriendlyDateString(DateTime, Nullable(Of DateTime))
+references:
+- uid: CSTree.BCLExtensions
+  commentId: N:CSTree.BCLExtensions
+  name: CSTree.BCLExtensions
+  nameWithType: CSTree.BCLExtensions
+  fullName: CSTree.BCLExtensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.DayOfWeek[]
+  isExternal: true
+  name: DayOfWeek[]
+  nameWithType: DayOfWeek[]
+  fullName: System.DayOfWeek[]
+  nameWithType.vb: DayOfWeek()
+  fullName.vb: System.DayOfWeek()
+  name.vb: DayOfWeek()
+  spec.csharp:
+  - uid: System.DayOfWeek
+    name: DayOfWeek
+    nameWithType: DayOfWeek
+    fullName: System.DayOfWeek
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.DayOfWeek
+    name: DayOfWeek
+    nameWithType: DayOfWeek
+    fullName: System.DayOfWeek
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString*
+  commentId: Overload:CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString
+  name: ToChineseDateString
+  nameWithType: DateTimeExtensions.ToChineseDateString
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateString
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString*
+  commentId: Overload:CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString
+  name: ToChineseDateTimeString
+  nameWithType: DateTimeExtensions.ToChineseDateTimeString
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToChineseDateTimeString
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToDateString*
+  commentId: Overload:CSTree.BCLExtensions.DateTimeExtensions.ToDateString
+  name: ToDateString
+  nameWithType: DateTimeExtensions.ToDateString
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToDateString
+- uid: CSTree.BCLExtensions.DateTimeExtensions.IsBefore*
+  commentId: Overload:CSTree.BCLExtensions.DateTimeExtensions.IsBefore
+  name: IsBefore
+  nameWithType: DateTimeExtensions.IsBefore
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.IsBefore
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: CSTree.BCLExtensions.DateTimeExtensions.IsAfter*
+  commentId: Overload:CSTree.BCLExtensions.DateTimeExtensions.IsAfter
+  name: IsAfter
+  nameWithType: DateTimeExtensions.IsAfter
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.IsAfter
+- uid: CSTree.BCLExtensions.DateTimeExtensions.IsWeekend*
+  commentId: Overload:CSTree.BCLExtensions.DateTimeExtensions.IsWeekend
+  name: IsWeekend
+  nameWithType: DateTimeExtensions.IsWeekend
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.IsWeekend
+- uid: CSTree.BCLExtensions.DateTimeExtensions.IsToday*
+  commentId: Overload:CSTree.BCLExtensions.DateTimeExtensions.IsToday
+  name: IsToday
+  nameWithType: DateTimeExtensions.IsToday
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.IsToday
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToStartOfDay*
+  commentId: Overload:CSTree.BCLExtensions.DateTimeExtensions.ToStartOfDay
+  name: ToStartOfDay
+  nameWithType: DateTimeExtensions.ToStartOfDay
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToStartOfDay
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToEndOfDay*
+  commentId: Overload:CSTree.BCLExtensions.DateTimeExtensions.ToEndOfDay
+  name: ToEndOfDay
+  nameWithType: DateTimeExtensions.ToEndOfDay
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToEndOfDay
+- uid: CSTree.BCLExtensions.DateTimeExtensions.ToFriendlyDateString*
+  commentId: Overload:CSTree.BCLExtensions.DateTimeExtensions.ToFriendlyDateString
+  name: ToFriendlyDateString
+  nameWithType: DateTimeExtensions.ToFriendlyDateString
+  fullName: CSTree.BCLExtensions.DateTimeExtensions.ToFriendlyDateString
